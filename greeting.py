@@ -8,5 +8,5 @@ def get_time(hour):
 
 
 def get_greeting(now):
-    greet = f"# 👋 Hey! Welcome to my GitHub Profile\n\n"
+    greet = f"# 👋 Hey! I'm Gui, welcome to my GitHub Profile\n\n"
     return greet + f"## {get_time(now.hour)}\n"
