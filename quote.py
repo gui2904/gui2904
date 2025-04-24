@@ -12,6 +12,8 @@ def get_quote():
         if response.status_code == 200:
             data = response.json()[0]
             return data["quote"], data["author"]
+        else:
+            return f"API Error: {response.status_code}", ""
     except Exception as e:
         return f"Could not fetch quote. ({e})", ""
 
