@@ -23,6 +23,9 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y libgirepository1.0-dev gir1.2-glib-2.0 
 
+      - name: Install Python dependencies
+        run: python3 -m pip install --upgrade pip && pip install -r requirements.txt
+
       - name: Run README updater
         run: python3 main.py 
 
