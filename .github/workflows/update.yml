@@ -24,7 +24,7 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade pip && source myenv/bin/activate
           pip install -r requirements.txt && python -m pip install https://gitlab.gnome.org/GNOME/pygobject/-/archive/3.51.0/pygobject-3.51.0.tar.gz
 
       - name: Run README updater
