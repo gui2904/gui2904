@@ -29,6 +29,8 @@ jobs:
             gobject-introspection \
             libglib2.0-dev \
             pkg-config
+          dpkg -l | grep girepository
+
 
       - name: Install Python dependencies
         run: |
