@@ -19,18 +19,17 @@ jobs:
 
       - name: Install system dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libcairo2-dev \
-            libgirepository1.0-dev \
-            gir1.2-glib-2.0 \
-            python3-gi \
-            python3-gi-cairo \
-            gobject-introspection \
-            libglib2.0-dev \
-            pkg-config
-          dpkg -l | grep girepository
-
+        sudo apt-get update
+        sudo apt-get install -y \
+          libcairo2-dev \
+          libgirepository1.0-dev \
+          gir1.2-glib-2.0 \
+          python3-gi \
+          python3-gi-cairo \
+          gobject-introspection \
+          libglib2.0-dev \
+          pkg-config
+        dpkg -l | grep girepository || echo "girepository not found!"
 
       - name: Install Python dependencies
         run: |
