@@ -21,9 +21,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y libcairo2-dev
 
       - name: Install dependencies
-        run: |
-          python3 -m pip install --upgrade pip
-          pip install -r requirements.txt
+        run: sudo apt-get update && sudo apt-get install -y libgirepository1.0-dev gir1.2-glib-2.0 
 
       - name: Run README updater
         run: python3 main.py 
